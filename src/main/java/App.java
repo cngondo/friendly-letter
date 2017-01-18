@@ -21,7 +21,7 @@ public class App {
      // Favourite photos route
      get("/favourite_photos", (request, response) ->
      	 {
-     	 	return new ModelAndView(new HashMap(), "templates/favorite_photos.vtl");
+     	 	return new ModelAndView(new HashMap(), "templates/favourite_photos.vtl");
      	 }, new VelocityTemplateEngine()
      	);
   }
