@@ -2,7 +2,12 @@ import static spark.Spark.*;
 
 public class App {
 	public static void main(String[] args) {
-     get("/hello", (request, response) -> 
+		// To locate the resources for the project
+		staticFileLocation("/public");
+		//Port Number
+		port(1234);
+		//Hello route
+     get("/", (request, response) -> 
      	 "<!DOCTYPE html>" +
          "<html>" +
          "<head>" +
@@ -20,6 +25,24 @@ public class App {
            "<p>Travel Enthusiast Jane</p>" +
          "</body>" +
        "</html>"
+     	);
+     // Favourite photos route
+     get("/favourite_photos", (request, response) ->
+     	 "<!DOCTYPE html>" +
+      "<html>" +
+      "<head>" +
+        "<title>Hello Friend!</title>" +
+        "<link rel='stylesheet'  href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>" +
+      "</head>" +
+      "<body>" +
+       "<h1>Favorite Traveling Photos</h1>" +
+          "<ul>" +
+            "<li><img src='/images/foggymountain.jpeg' alt='A photo of a mountain.'/></li>"
+            + "<br>" +
+            "<li><img src='/images/rockycoast.jpeg' alt='A photo of a a rocky beach.'/></li>" +
+          "</ul>" +
+      "</body>" +
+      "</html>"
      	);
   }
 }
