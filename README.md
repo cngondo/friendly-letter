@@ -8,7 +8,9 @@ Exploring Spark, a java web framework
 
 - Gradle 3.3
 
-- Spark
+- [Spark](https://github.com/perwendel/spark)
+
+- Velocity Templating Engine
 
 ## Instructions
 

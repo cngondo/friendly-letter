@@ -1,3 +1,4 @@
+import java.util.Map;
 import java.util.HashMap;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -15,13 +16,20 @@ public class App {
 			Make sure that the get request returns the required velocity template
 		*/
      get("/", (request, response) -> {
-     	  return new ModelAndView(new HashMap(), "templates/hello.vtl");
-		     }, new VelocityTemplateEngine()
+     		
+     		Map<String, Object> model = new HashMap<String, Object>();
+     		model.put("view", "templates/hello.vtl");
+
+	 	  	return new ModelAndView(model, "templates/layout.vtl");
+		    }, new VelocityTemplateEngine()
 	    );
      // Favourite photos route
      get("/favourite_photos", (request, response) ->
      	 {
-     	 	return new ModelAndView(new HashMap(), "templates/favourite_photos.vtl");
+     	 	Map<String, Object> model = new HashMap<String, Object>();
+     		model.put("view", "templates/favourite_photos.vtl");
+
+     	 	return new ModelAndView(model, "templates/layout.vtl");
      	 }, new VelocityTemplateEngine()
      	);
   }
