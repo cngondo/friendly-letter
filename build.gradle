@@ -34,6 +34,10 @@ dependencies {
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
+
+    //Velocity templating engine
+	compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+
 }
 
 
