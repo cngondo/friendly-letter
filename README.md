@@ -10,7 +10,7 @@ Exploring Spark, a java web framework
 
 - [Spark](https://github.com/perwendel/spark)
 
-- Velocity Templating Engine
+- [Velocity Templating Engine](velocity.apache.org/engine/1.7/user-guide.html)
 
 ## Instructions
 
